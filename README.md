@@ -1,14 +1,38 @@
 # Email API
 
-This project provides an API that connects to users' mailboxes (emails) and offers various functionalities related to email data.
+## Overview
 
-## Features
+The Email API provides functionalities to connect with users' mailboxes, authenticate via OAuth2, check for new emails since a given timestamp, and calculate the hypothetical cost of processing emails using a model.
 
-- OAuth2 authentication with Google and Microsoft email providers.
-- Check if a user has received at least one email since a given timestamp.
-- Calculate the cost of processing emails from the last 24 hours using a hypothetical model.
+## Table of Contents
 
-## Getting Started
+- [Architecture](#architecture)
+- [Decisions Made](#decisions-made)
+- [Challenges](#challenges)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Architecture
+
+### Components:
+
+1. **Authentication**: Uses OAuth2 to authenticate users with their email providers (Google and Microsoft).
+2. **Email Retrieval**: Fetches emails since a given timestamp.
+
+### Flow:
+
+1. The user initiates an OAuth2 flow by providing their email.
+2. Once authenticated, the user can query for new emails since a timestamp.
+
+## Decisions Made
+
+1. **OAuth2 for Authentication**: Chose OAuth2 due to its widespread adoption and security. It also provides a seamless experience for users.
+2. **Express.js Framework**: Used Express.js for its simplicity, performance, and extensive middleware support.
+3. **Modular Structure**: Adopted a modular directory structure to separate concerns, making the codebase scalable and maintainable.
+
+
+## Getting Started to Run this Locally
 
 ### Prerequisites
 
