@@ -2,13 +2,13 @@ import express from "express";
 const authRouter = express.Router();
 import { OAuth2Client } from "google-auth-library";
 
-const CLIENT_ID = process.env.CLIENT_ID;
-const CLIENT_SECRET = process.env.CLIENT_SECRET;
-const REDIRECT_URI = "http://localhost:3000/connect/google/callback";
-
-const oAuth2Client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 
 authRouter.get("/email", (req, res) => {
+  const CLIENT_ID = process.env.CLIENT_ID;
+  const CLIENT_SECRET = process.env.CLIENT_SECRET;
+  const REDIRECT_URI = "http://localhost:3000/connect/google/callback";
+  const oAuth2Client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
+
   try {
     const { email } = req.query;
 

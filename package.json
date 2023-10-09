@@ -20,6 +20,7 @@
     "google-auth-library": "^9.1.0",
     "googleapis": "^71.0.0",
     "node-fetch": "^2.6.1",
+    "nodemon": "^3.0.1",
     "passport": "^0.4.1",
     "passport-azure-ad": "^4.3.0",
     "passport-google-oauth20": "^2.0.0"
